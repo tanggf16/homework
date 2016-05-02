@@ -1,0 +1,8 @@
+myprogram:main.o second.o third.o
+	gcc -o myprogram main.o second.o third.o
+main.o :main.c a.h
+	gcc -c main.c 
+second.o:second.c a.h b.h
+	gcc -c second.c
+third.o:third.c b.h c.h
+	gcc -c third.c
